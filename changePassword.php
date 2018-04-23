@@ -18,7 +18,7 @@
 
         $encryptedPassword;
 
-        $sql="SELECT * FROM gp_user WHERE username='$plainUsername'  ";
+        $sql="SELECT * FROM aacosta_user WHERE username='$plainUsername'  ";
 
         $result=$conn->query($sql);
         while($row=$result->fetch_assoc()){

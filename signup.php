@@ -21,7 +21,7 @@
         die("connection failed: " . $$conn->connect_error);
         }
 
-        $sql= "INSERT INTO gp_user (username,encryptedPassword) VALUES ('$enteredUsername','$encryptedPassword')";
+        $sql= "INSERT INTO aacosta_user (username,encryptedPassword) VALUES ('$enteredUsername','$encryptedPassword')";
 
         if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
