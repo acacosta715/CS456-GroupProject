@@ -1,7 +1,8 @@
 <html>
 <head><title>Sign-up answer</title><head>
 <?php
-        $enteredUsername=$_POST['username'];
+        session_start();
+	$enteredUsername=$_POST['username'];
         $plainPassword=$_POST['password'];
         $other="other";
 
@@ -25,7 +26,7 @@
 
         if ($conn->query($sql) === TRUE) {
         echo "New record created successfully\n";
-	echo "<a href='login.html>BACK TO LOGIN</a>";
+	echo "<a href='../html/login.html'>BACK TO LOGIN</a>";
         } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
         }

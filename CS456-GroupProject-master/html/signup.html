@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html>
 <head><title>Signup</title>
     <link rel="stylesheet" href="projectStyle.css" type="text/css">
@@ -6,8 +5,8 @@
     </head>
 <body>
 <form action="../php/signup.php" method="POST">
-<p>Enter your username: <input type="text" id="username" /></p>
-<p>Enter your password: <input type="password" id="pass" /></p>
+<p>Enter your username: <input type="text" id="username" name="username"/></p>
+<p>Enter your password: <input type="password" id="password" name="password"/></p>
 <p><input type="submit" /></p>
 </form>
 <p><a href="login.html">back to login</a></p>

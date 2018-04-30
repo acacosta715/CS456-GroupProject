@@ -1,7 +1,8 @@
 <?php
 //      echo $_POST['username'];
 //      echo $_POST['pass'];
-        $servername="cs-database.cs.loyola.edu";
+        session_start();
+	$servername="cs-database.cs.loyola.edu";
         $username="aacosta";
         $password="1696747";
         $dbname="aacosta";
@@ -14,7 +15,7 @@
 
         $plainUsername=$_POST['username'];
 	$_SESSION['user'] = $plainUsername;
-        $plainPassword=$_POST['pass'];
+        $plainPassword=$_POST['password'];
 
         $encryptedPassword;
 
@@ -30,7 +31,7 @@
 //      echo $encryptedPassword;
         if( password_verify( $plainPassword, $encryptedPassword ))
         {
-                echo "Welcome ".$username."!\n";
+                echo "Welcome ".$plainUsername."!\n";
 		echo "<br><a href='../html/createNewHW.html'>Add Homework</a>";
 		echo "<br><a href='../html/CreateNewEvent.html'>Add Event</a>";
 		echo "<br><a href='../html/checkCalendar.html'>Check Calendar</a>";

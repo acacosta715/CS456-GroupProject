@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html>
  <head>
    <script type = "text/javascript" src = "http://code.jquery.com/jquery-latest.min.js"></script>
@@ -11,8 +10,10 @@
  </head>
  <body id = "body">
   <form action="../php/checkCalendar.php" method="post">
-     <input type="text" id="userDate">
+     Enter a date: <input type="text" id="userDate" name="userDate">
      <input type="submit" value="Submit">
    </form>
+ <a href='createNewHW.html'>Create new homework</a>
+ <a href='CreateNewEvent.html'>Create new event</a>
  </body>
 </html>

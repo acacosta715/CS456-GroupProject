@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html>
 <head><title>Login site</title>
     <link rel="stylesheet" href="projectStyle.css" type="text/css">
@@ -6,8 +5,8 @@
     </head>
 <body>
         <form action="../php/login.php" method="POST" onsubmit="validateForm(event);">
-        <p>Enter your username: <input type="text" id="username" /></p>
-        <p>Enter your password: <input type="password" id="pass" /></p>
+        <p>Enter your username: <input type="text" id="username" name="username"/></p>
+        <p>Enter your password: <input type="password" id="pass" name="password"/></p>
         <p><input type="submit" /></p>
 	<br>
 	<div id="msg1"></div>

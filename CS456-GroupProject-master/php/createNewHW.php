@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $servername="cs-database.cs.loyola.edu";
     $username="aacosta";
     $password="1696747";
@@ -22,7 +23,7 @@
     $endTime = $_POST["endTime"];
     $username = $_SESSION['user'];
 
-    $sql = "INSERT INTO aacosta_homework values ('$asnName','$asnClass','$startMonth','$startDay','$startYear','$endMonth','$endDay','$endYear','$start_time','$endTime','$username')";
+    $sql = "INSERT INTO aacosta_homework values (NULL,'$asnName','$asnClass','$startMonth','$startDay','$startYear','$endMonth','$endDay','$endYear','$start_time','$endTime','$username')";
 
     if($conn->query($sql) === TRUE) {
     echo "New homework successfully created";
