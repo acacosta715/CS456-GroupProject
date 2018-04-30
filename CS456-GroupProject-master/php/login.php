@@ -13,6 +13,7 @@
         }
 
         $plainUsername=$_POST['username'];
+	$_SESSION['user'] = $plainUsername;
         $plainPassword=$_POST['pass'];
 
         $encryptedPassword;
@@ -29,11 +30,15 @@
 //      echo $encryptedPassword;
         if( password_verify( $plainPassword, $encryptedPassword ))
         {
-                echo "Password verified";
+                echo "Welcome ".$username."!\n";
+		echo "<br><a href='../html/createNewHW.html'>Add Homework</a>";
+		echo "<br><a href='../html/CreateNewEvent.html'>Add Event</a>";
+		echo "<br><a href='../html/checkCalendar.html'>Check Calendar</a>";
         }
         else
         {
-                echo "Wrong Password";
+                echo "Wrong Password\n";
+		echo "<a href='../html/login.html'>BACK TO LOGIN</a>";
         }
 
 

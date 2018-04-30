@@ -1,15 +1,19 @@
+<?php session_start(); ?>
 <html>
 <head><title>Login site</title>
     <link rel="stylesheet" href="projectStyle.css" type="text/css">
+    <script language="javascript" src="../js/login.js"></script>
     </head>
 <body>
-        <form action="/CS456-GroupProject-master/php/login.php" method="POST">
-        <p>Enter your username: <input type="text" name="username" /></p>
-        <p>Enter your password: <input type="text" name="pass" /></p>
-        <input type="hidden" name="id" value='<? $_GET["username"] ?>' />
+        <form action="../php/login.php" method="POST" onsubmit="validateForm(event);">
+        <p>Enter your username: <input type="text" id="username" /></p>
+        <p>Enter your password: <input type="password" id="pass" /></p>
         <p><input type="submit" /></p>
+	<br>
+	<div id="msg1"></div>
+	<div id="msg2"></div>
         </form>
 
-	<p><a href="signup.html">Sign-up</a> <a href="changePassword.html">Change Password</a></p>
+	<p><a href="signup.html">Sign-up</a><br><a href="changePassword.html">Change Password</a><br><a href="ForgotPassword.html">Forgot your Password?</a></p>
 </body>
 </html>

@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <html>
     <head>
     <title>Create New Event</title>
@@ -7,16 +7,16 @@
 
     <body>
         <h1>Create New Event</h1>
-        <form action="/CS456-GroupProject-master/php/Event.php" method="post">
-            <p>Name of New Event: <input type="text" name=newEvent></p>
-            <p>Start Month of New Event: <input type="text" name=startMonth></p>
-            <p>Start Day of New Event: <input type="number" name=startDay></p>
-            <p>Start Year of New Event: <input type="number" name=startYear></p>
-            <p>Start Time of New Event: <input type="time" name=startTime></p>
-            <p>End Month of New Event: <input type="text" name=endMonth></p>
-            <p>End Day of New Event: <input type="number" name=endDay></p>
-            <p>End Year of New Event: <input type="number" name=endYear></p>
-            <p>End Time of New Event: <input type="time" name=endTime></p>
+        <form action="../php/Event.php" method="post">
+            <p>Name of New Event: <input type="text" id=newEvent></p>
+            <p>Start Month of New Event: <input type="text" id=startMonth></p>
+            <p>Start Day of New Event: <input type="number" id=startDay></p>
+            <p>Start Year of New Event: <input type="number" id=startYear></p>
+            <p>Start Time of New Event: <input type="time" id=startTime></p>
+            <p>End Month of New Event: <input type="text" id=endMonth></p>
+            <p>End Day of New Event: <input type="number" id=endDay></p>
+            <p>End Year of New Event: <input type="number" id=endYear></p>
+            <p>End Time of New Event: <input type="time" id=endTime></p>
             <p><input type=submit value=Submit></p>
         </form>
     </body>

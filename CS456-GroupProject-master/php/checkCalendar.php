@@ -4,9 +4,11 @@
   $pass = "1696747";
   $dbname = "aacosta";
 
-  4conn= new mysqli($host, $user, $pass, $dbname);
-  if($ocnn->connect_error){
+  $conn= new mysqli($host, $user, $pass, $dbname);
+  if($conn->connect_error){
   die("conenction failed: " . $conn->connect_error);
   }
+
+  print_r($_SESSION);
 
 ?>

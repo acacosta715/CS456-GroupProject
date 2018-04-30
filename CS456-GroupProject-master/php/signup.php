@@ -24,7 +24,8 @@
         $sql= "INSERT INTO aacosta_user (username,encryptedPassword) VALUES ('$enteredUsername','$encryptedPassword')";
 
         if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "New record created successfully\n";
+	echo "<a href='login.html>BACK TO LOGIN</a>";
         } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
         }

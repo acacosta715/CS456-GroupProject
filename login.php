@@ -15,6 +15,8 @@
         $plainUsername=$_POST['username'];
         $plainPassword=$_POST['pass'];
 
+$test = $_POST['id'];
+
         $encryptedPassword;
 
         $sql="SELECT * FROM aacosta_user WHERE username='$plainUsername' ";
@@ -30,6 +32,7 @@
         if( password_verify( $plainPassword, $encryptedPassword ))
         {
                 echo "Password verified";
+echo $test."here";
         }
         else
         {

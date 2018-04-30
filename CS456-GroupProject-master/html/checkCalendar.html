@@ -1,7 +1,8 @@
+<?php session_start(); ?>
 <html>
  <head>
    <script type = "text/javascript" src = "http://code.jquery.com/jquery-latest.min.js"></script>
-   <script language="javascript" src="/CS456-GroupProject-master/js/checkCalendar.js"></script>
+   <script language="javascript" src="../js/checkCalendar.js"></script>
    <link rel="stylesheet" href="checkCalendar.css" type="text/css">
      <link rel="stylesheet" href="projectStyle.css" type="text/css">
    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -9,7 +10,7 @@
    <title>Check Events and Homework</title>
  </head>
  <body id = "body">
-  <form action="checkCalendar.php" method="post">
+  <form action="../php/checkCalendar.php" method="post">
      <input type="text" id="userDate">
      <input type="submit" value="Submit">
    </form>

@@ -35,10 +35,11 @@
 
                 //echo $nencryptedPassword;
 
-                $sql = "UPDATE ***update for project*** SET encryptedPassword='$nencryptedPassword' WHERE username='$plainUsername' ";
+                $sql = "UPDATE aacosta_user SET encryptedPassword='$nencryptedPassword' WHERE username='$plainUsername' ";
 
                 if ($conn->query($sql) === TRUE) {
-                        echo "Record updated successfully";
+                        echo "Record updated successfully\n";
+			echo "<a href='../html/login.html'>back to login</a>";
                 } else {
                 echo "Error updating record: " . $conn->error;
         }

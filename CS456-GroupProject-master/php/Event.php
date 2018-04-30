@@ -19,7 +19,9 @@
     $endDay = $_POST["endDay"];
     $endYear = $_POST["endYear"];
     $endTime = $_POST["endTime"];
-    $sql = "INSERT INTO aacosta_event values ('$asnName','$startMonth','$startDay','$startYear','$endMonth','$endDay','$endYear','$start_time','$endTime')";
+    $username = $_SESSION["user"];
+
+    $sql = "INSERT INTO aacosta_event values ('$asnName','$startMonth','$startDay','$startYear','$endMonth','$endDay','$endYear','$start_time','$endTime','$username')";
     if($conn->query($sql) === TRUE) {
     echo "New event successfully created";
     } else {

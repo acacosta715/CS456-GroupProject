@@ -1,11 +1,13 @@
+<?php session_start(); ?>
 <html>
 <head><title>Signup</title>
     <link rel="stylesheet" href="projectStyle.css" type="text/css">
+    <script language="javascript" src="../js/login.js"></script>
     </head>
 <body>
-<form action="/CS456-GroupProject-master/php/signup.php" method="POST">
-<p>Enter your username: <input type="text" name="username" /></p>
-<p>Enter your password: <input type="text" name="password" /></p>
+<form action="../php/signup.php" method="POST">
+<p>Enter your username: <input type="text" id="username" /></p>
+<p>Enter your password: <input type="password" id="pass" /></p>
 <p><input type="submit" /></p>
 </form>
 <p><a href="login.html">back to login</a></p>

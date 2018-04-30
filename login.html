@@ -3,8 +3,8 @@
 <body>
         <form action="login.php" method="POST">
         <p>Enter your username: <input type="text" name="username" /></p>
-        <p>Enter your password: <input type="text" name="pass" /></p>
-        <input type="hidden" name="id" value='<? $_GET["username"] ?>' />
+        <p>Enter your password: <input type="password" name="pass" /></p>
+        <input type="hidden" name="id" value='<?php echo $_POST["username"]; ?>' />
         <p><input type="submit" /></p>
         </form>
 

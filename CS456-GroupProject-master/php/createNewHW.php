@@ -20,8 +20,9 @@
     $endDay = $_POST["endDay"];
     $endYear = $_POST["endYear"];
     $endTime = $_POST["endTime"];
+    $username = $_SESSION['user'];
 
-    $sql = "INSERT INTO aacosta_homework values ('$asnName','$asnClass','$startMonth','$startDay','$startYear','$endMonth','$endDay','$endYear','$start_time','$endTime')";
+    $sql = "INSERT INTO aacosta_homework values ('$asnName','$asnClass','$startMonth','$startDay','$startYear','$endMonth','$endDay','$endYear','$start_time','$endTime','$username')";
 
     if($conn->query($sql) === TRUE) {
     echo "New homework successfully created";
